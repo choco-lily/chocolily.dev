@@ -9,6 +9,7 @@ import cloudflare from "@astrojs/cloudflare"
 export default defineConfig({
     integrations: [
         starlight({
+            components: { Footer: "src/components/Footer.astro", ContentPanel: 'src/components/ContentPanel.astro' },
             title: {
                 ko: "쵸코릴리",
                 en: "chocolily",
@@ -38,14 +39,9 @@ export default defineConfig({
                     label: "leadingNavLinks",
                     items: [
                         {
-                            label: "블로그",
-                            translations: { en: "Blog" },
-                            link: "https://blog.chocolily.dev",
-                        },
-                        {
                             label: "문서",
                             translations: { en: "Docs" },
-                            link: "/maplestory/boss",
+                            link: "/chocolily",
                         },
                     ],
                 },
@@ -54,28 +50,36 @@ export default defineConfig({
                     translations: {
                         en: "chocolily",
                     },
-                    autogenerate: {
-                        directory: "chocolily",
-                    },
+                    items: [
+                        {
+                            label: "메이플스토리",
+                            items: [
+                                {
+                                    label: "보스",
+                                    link: "/chocolily/maplestory/boss",
+                                },
+                            ],
+                        },
+                        {
+                            label: "사운드 볼텍스",
+                            items: [
+                                {
+                                    label: "프로필",
+                                    link: "/chocolily/sdvx/info",
+                                },
+                            ],
+                        },
+                    ],
                 },
                 {
-                    label: "메이플스토리",
+                    label: "플라티나 랩",
                     translations: {
-                        en: "MapleStory",
+                        en: "PLATiNA :: LAB",
                     },
                     autogenerate: {
-                        directory: "MapleStory",
+                        directory: "PLATiNA_LAB",
                     },
                 },
-                {
-                    label: "사운드 볼텍스",
-                    translations: {
-                        en: "SOUND VOLTEX"
-                    },
-                    autogenerate: {
-                        directory: "SDVX"
-                    }
-                }
             ],
             head: [
                 {
@@ -99,7 +103,7 @@ export default defineConfig({
                 {
                     tag: "script",
                     attrs: {
-                        src: "../../custom.js",
+                        src: "/custom.js",
                     },
                 },
                 {
