@@ -9,7 +9,11 @@ import cloudflare from "@astrojs/cloudflare"
 export default defineConfig({
     integrations: [
         starlight({
-            components: { Footer: "src/components/Footer.astro", ContentPanel: 'src/components/ContentPanel.astro' },
+            components: {
+                Footer: "src/components/Footer.astro",
+                ContentPanel: "src/components/ContentPanel.astro",
+                Sidebar: "src/components/Sidebar.astro"
+            },
             title: {
                 ko: "쵸코릴리",
                 en: "chocolily",
