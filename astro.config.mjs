@@ -12,7 +12,7 @@ export default defineConfig({
             components: {
                 Footer: "src/components/Footer.astro",
                 ContentPanel: "src/components/ContentPanel.astro",
-                Sidebar: "src/components/Sidebar.astro"
+                Sidebar: "src/components/Sidebar.astro",
             },
             title: {
                 ko: "쵸코릴리",
