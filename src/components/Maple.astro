@@ -1,0 +1,12 @@
+---
+const { n } = Astro.props
+---
+
+<a
+    href={`https://maple.gg/u/${n}`}
+    target="_blank"
+    onmouseenter={`charcter("${n}", 1)`}
+    onmouseleave={`charcter("${n}", 0)`}
+>
+    {n}
+</a>

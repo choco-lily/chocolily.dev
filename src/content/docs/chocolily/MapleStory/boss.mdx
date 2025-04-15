@@ -49,37 +49,19 @@ export const maple = (n) => {
     )
 }
 
+import Boss from "src/components/Boss.astro"
+
 ## 격파
 
 ### 스우
 
-#### 노멀
-
-2021년 6월 9일
-
-<Image src={normalLotus} loading="eager" alt="노멀 스우" />
-
-#### 하드
-
-2024년 6월 13일 17시 59분 51초\
-캐릭터: {maple("천학이")}
-
-<Image src={hardLotus} loading="eager" alt="하드 스우" />
+<Boss b={normalLotus} d="노멀" boss="스우" date="2021년 6월 9일" />
+<Boss b={hardLotus} d="하드" boss="스우" date="2024년 6월 13일 17시 59분 51초" c="천학이" />
 
 ### 데미안
 
-#### 노멀
-
-2021년 11월 18일
-
-<Image src={normalDamien} alt="노멀 데미안" />
-
-#### 하드
-
-2024년 7월 28일 14시 8분 25초\
-캐릭터: {maple("포니테일은월")}
-
-<Image src={hardDamien} alt="하드 데미안" />
+<Boss b={normalDamien} d="노멀" boss="데미안" date="2021년 11월 18일" />
+<Boss b={hardDamien} d="하드" boss="데미안" date="2024년 7월 28일 14시 8분 25초" c="포니테일은월" />
 
 ### 가디언 엔젤 슬라임
 

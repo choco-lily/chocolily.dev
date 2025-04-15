@@ -1,0 +1,19 @@
+---
+import Maple from "./Maple.astro"
+import { Image } from "astro:assets"
+
+export interface Props {
+    b: ImageMetadata
+    d: string
+    boss: string
+    date: string
+    c?: string
+}
+
+const { b, d, boss, date, c } = Astro.props
+---
+
+<h4>{d}</h4>
+{date}<br>
+{c ? <>캐릭터: <Maple n={c} /></> : ""}
+<Image src={b} alt=`${d} ${boss}` />
