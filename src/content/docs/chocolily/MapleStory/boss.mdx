@@ -29,12 +29,12 @@ import hardDarknell from "src/images/boss/hard_darknell.webp"
 import hardVerusHilla from "src/images/boss/hard_verusHilla.webp"
 import hardBlackMage from "src/images/boss/hard_blackMage.webp"
 
-import kaiserium from "src/images/boss/kaiserium.webp"
-import guardianAngelRing from "src/images/boss/guardianAngelRing.webp"
-import estellaEarrings from "src/images/boss/estellaEarrings.webp"
-import daybreakPendant from "src/images/boss/daybreakPendant.webp"
-import blackHeart from "src/images/boss/blackHeart.webp"
-import blackHeart2 from "src/images/boss/blackHeart2.webp"
+import kaiserium from "src/images/items/kaiserium.webp"
+import guardianAngelRing from "src/images/items/guardianAngelRing.webp"
+import estellaEarrings from "src/images/items/estellaEarrings.webp"
+import daybreakPendant from "src/images/items/daybreakPendant.webp"
+import blackHeart from "src/images/items/blackHeart.webp"
+import blackHeart2 from "src/images/items/blackHeart2.webp"
 
 export const maple = (n) => {
     return (
@@ -50,6 +50,7 @@ export const maple = (n) => {
 }
 
 import Boss from "src/components/Boss.astro"
+import Item from "src/components/Item.astro"
 
 ## 격파
 
@@ -65,159 +66,54 @@ import Boss from "src/components/Boss.astro"
 
 ### 가디언 엔젤 슬라임
 
-#### 노멀
-
-2022년 9월 1일
-
-<Image src={normalGuardianAngelSlime} alt="노멀 가디언 엔젤 슬라임" />
-
-#### 카오스
-
-2025년 3월 28일 18시 24분 3초\
-캐릭터: {maple("쵸코릴리")}
-
-<Image src={chaosGuardianAngelSlime} alt="카오스 가디언 엔젤 슬라임" />
+<Boss b={normalGuardianAngelSlime} d="노멀" boss="가디언 엔젤 슬라임" date="2022년 9월 1일" />
+<Boss b={chaosGuardianAngelSlime} d="카오스" boss="가디언 엔젤 슬라임" date="2025년 3월 28일 18시 24분 3초" c="쵸코릴리" />
 
 ### 루시드
-
-#### 이지
-
-2023년 7월 15일\
-캐릭터: {maple("천학이")}
-
-<Image src={easyLucid} alt="이지 루시드" />
-
-#### 노멀
-
-2023년 8월 18일\
-캐릭터: {maple("천학이")}
-
-<Image src={normalLucid} alt="노멀 루시드" />
-
-#### 하드
-
-2024년 10월 3일 17시 10분 48초\
-캐릭터: {maple("포니테일은월")}
-
-<Image src={hardLucid} alt="하드 루시드" />
+<Boss b={easyLucid} d="이지" boss="루시드" date="2023년 7월 15일" c="천학이" />
+<Boss b={normalLucid} d="노멀" boss="루시드" date="2023년 8월 18일" c="천학이" />
+<Boss b={hardLucid} d="하드" boss="루시드" date="2024년 10월 3일 17시 10분 48초" c="포니테일은월" />
 
 ### 윌
-
-#### 이지
-
-2023년 7월 30일\
-캐릭터: {maple("천학이")}
-
-<Image src={easyWill} alt="이지 윌" />
-
-#### 노멀
-
-2023년 9월 12일\
-캐릭터: {maple("천학이")}
-
-<Image src={normalWill} alt="노멀 윌" />
-
-#### 하드
-
-2025년 3월 28일 18시 43분 41초\
-캐릭터: {maple("쵸코릴리")}
-
-<Image src={hardWill} alt="하드 윌" />
+<Boss b={easyWill} d="이지" boss="윌" date="2023년 7월 30일" c="천학이" />
+<Boss b={normalWill} d="노멀" boss="윌" date="2023년 9월 12일" c="천학이" />
+<Boss b={hardWill} d="하드" boss="윌" date="2025년 3월 28일 18시 43분 41초" c="쵸코릴리" />
 
 ### 더스크
-
-#### 노멀
-
-2023년 8월 10일\
-캐릭터: {maple("천학이")}
-
-<Image src={normalDusk} alt="노멀 더스크" />
-
-#### 카오스
-
-2024년 8월 31일 10시 22분 1초\
-캐릭터: {maple("포니테일은월")}
-
-<Image src={chaosDusk} alt="카오스 더스크" />
+<Boss b={normalDusk} d="노멀" boss="더스크" date="2023년 8월 10일" c="천학이" />
+<Boss b={chaosDusk} d="카오스" boss="더스크" date="2024년 8월 31일 10시 22분 1초" c="포니테일은월" />
 
 ### 듄켈
-
-#### 노멀
-
-2023년 8월 18일\
-캐릭터: {maple("천학이")}
-
-<Image src={normalDarknell} alt="노멀 듄켈" />
-
-#### 하드
-
-2025년 2월 6일\
-캐릭터: {maple("쵸코릴리")}
-
-<Image src={hardDarknell} alt="하드 듄켈" />
+<Boss b={normalDarknell} d="노멀" boss="듄켈" date="2023년 8월 18일" c="천학이" />
+<Boss b={hardDarknell} d="하드" boss="듄켈" date="2025년 2월 6일" c="쵸코릴리" />
 
 ### 진 힐라
-
-#### 노멀
-
-2024년 10월 2일 23시 41분 29초\
-캐릭터: {maple("포니테일은월")}
-
-<Image src={normalVerusHilla} alt="노멀 진 힐라" />
-
-#### 하드
-
-2025년 3월 29일 10시 56분 15초\
-캐릭터: {maple("쵸코릴리")}
-
-<Image src={hardVerusHilla} alt="하드 진 힐라" />
+<Boss b={normalVerusHilla} d="노멀" boss="진 힐라" date="2024년 10월 2일 23시 41분 29초" c="포니테일은월" />
+<Boss b={hardVerusHilla} d="하드" boss="진 힐라" date="2025년 3월 29일 10시 56분 15초" c="쵸코릴리" />
 
 ### 검은 마법사
-
-#### 하드
-
-2025년 4월 12일\
-캐릭터: {maple("쵸코릴리")}
-
-<Image src={hardBlackMage} alt="검은 마법사" />
+<Boss b={hardBlackMage} d="하드" boss="검은 마법사" date="2025년 4월 12일" c="쵸코릴리" />
 
 ## 물욕템
 
 ### 카이세리움
 
-2023년 6월 10일
-
-<Image src={kaiserium} alt="카이세리움" />
+<Item i={kaiserium} name="카이세리움" date="2023년 6월 10일" />
 
 ### 가디언 엔젤 링
 
-2025년 3월 28일 18시 24분 44초\
-캐릭터: {maple("쵸코릴리")}
-
-<Image src={guardianAngelRing} alt="가디언 엔젤 링" />
+<Item i={guardianAngelRing} name="가디언 엔젤 링" date="2025년 3월 28일 18시 24분 44초" c="쵸코릴리" />
 
 ### 에스텔라 이어링
 
-2023년 12월 18일\
-캐릭터: {maple("천학이")}
-
-<Image src={estellaEarrings} alt="에스텔라 이어링" />
+<Item i={estellaEarrings} name="에스텔라 이어링" date="2023년 12월 18일" c="천학이" />
 
 ### 데이브레이크 펜던트
 
-2025년 4월 3일 23시 13분 50초\
-캐릭터: {maple("쵸코릴리")}
-
-<Image src={daybreakPendant} alt="데이브레이크 펜던트" />
+<Item i={daybreakPendant} name="데이브레이크 펜던트" date="2025년 4월 3일 23시 13분 50초" c="쵸코릴리" />
 
 ### 블랙 하트
 
-2024년 7월 18일 19시 58분 28초\
-캐릭터: {maple("포니테일은월")}
-
-<Image src={blackHeart} alt="블랙 하트" />
-
-2025년 4월 9일\
-캐릭터: {maple("쵸코릴리")}
-
-<Image src={blackHeart2} alt="블랙 하트" />
+<Item i={blackHeart} name="블랙 하트" date="2024년 7월 18일 19시 58분 28초" c="포니테일은월" />
+<br />
+<Item i={blackHeart2} name="블랙 하트" date="2025년 4월 9일" c="쵸코릴리" />

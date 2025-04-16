@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets"
+
+interface Props {
+    i: ImageMetadata
+    name: string
+    date: string
+    c?: string
+}
+
+const { i, name, date, c } = Astro.props
+---
+
+<span>{date}</span><br />
+{
+    c && (
+        <span>
+            캐릭터:{" "}
+            <a
+                href={`https://maple.gg/u/${c}`}
+                target="_blank"
+                onmouseenter={`charcter("${c}", 1)`}
+                onmouseleave={`charcter("${c}", 0)`}
+            >
+                {c}
+            </a>
+        </span>
+    )
+}
+
+<Image src={i} alt={name} />
