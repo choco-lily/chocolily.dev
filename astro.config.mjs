@@ -56,6 +56,10 @@ export default defineConfig({
                     },
                     items: [
                         {
+                            label: "개요",
+                            link: "/chocolily",
+                        },
+                        {
                             label: "메이플스토리",
                             items: [
                                 {
