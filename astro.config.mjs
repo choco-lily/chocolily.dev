@@ -15,8 +15,8 @@ export default defineConfig({
                 Sidebar: "src/components/Sidebar.astro",
             },
             title: {
-                ko: "쵸코릴리",
-                en: "chocolily",
+                ko: "메이플 키우기 위키",
+                en: "Maplestory Idle Wiki",
             },
             locales: {
                 root: {
@@ -45,48 +45,21 @@ export default defineConfig({
                         {
                             label: "문서",
                             translations: { en: "Docs" },
-                            link: "/chocolily",
+                            link: "/wiki",
                         },
                     ],
                 },
                 {
-                    label: "쵸코릴리",
+                    label: "문서",
                     translations: {
-                        en: "chocolily",
+                        en: "docs",
                     },
                     items: [
                         {
                             label: "개요",
-                            link: "/chocolily",
-                        },
-                        {
-                            label: "메이플스토리",
-                            items: [
-                                {
-                                    label: "보스",
-                                    link: "/chocolily/maplestory/boss",
-                                },
-                            ],
-                        },
-                        {
-                            label: "사운드 볼텍스",
-                            items: [
-                                {
-                                    label: "프로필",
-                                    link: "/chocolily/sdvx/info",
-                                },
-                            ],
+                            link: "/wiki",
                         },
                     ],
-                },
-                {
-                    label: "플라티나 랩",
-                    translations: {
-                        en: "PLATiNA :: LAB",
-                    },
-                    autogenerate: {
-                        directory: "PLATiNA_LAB",
-                    },
                 },
             ],
             head: [
