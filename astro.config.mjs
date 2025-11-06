@@ -4,6 +4,7 @@ import starlight from "@astrojs/starlight"
 import starlightUtils from "@lorenzo_lewis/starlight-utils"
 
 import cloudflare from "@astrojs/cloudflare"
+import { fileURLToPath } from "node:url"
 
 // https://astro.build/config
 export default defineConfig({
@@ -44,20 +45,21 @@ export default defineConfig({
                         {
                             label: "문서",
                             translations: { en: "Docs" },
-                            link: "/wiki",
+                            link: "main",
                         },
                     ],
                 },
                 {
-                    label: "문서",
-                    translations: {
-                        en: "docs",
-                    },
+                    label: "메이플 키우기",
+                    translations: { en: "Maplestory Idle" },
+                    link: "main",
+                },
+                {
+                    label: "직업",
+                    translations: { en: "Jobs" },
                     items: [
-                        {
-                            label: "개요",
-                            link: "/wiki",
-                        },
+                        { label: "히어로", link: "job/hero", translations: { en: "Hero" } },
+                        { label: "다크나이트", link: "job/darkknight", translations: { en: "Dark Knight" } },
                     ],
                 },
             ],
@@ -100,4 +102,11 @@ export default defineConfig({
 
     output: "server",
     adapter: cloudflare({ imageService: "compile" }),
+    vite: {
+        resolve: {
+            alias: {
+                "@images": fileURLToPath(new URL("./src/images", import.meta.url)),
+            },
+        },
+    },
 })
