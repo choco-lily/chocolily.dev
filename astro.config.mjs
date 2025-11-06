@@ -35,7 +35,6 @@ export default defineConfig({
                 }),
             ],
             social: {
-                twitter: "https://x.com/Choco_Lily__",
                 github: "https://github.com/choco-lily/chocolily.dev",
             },
             sidebar: [
