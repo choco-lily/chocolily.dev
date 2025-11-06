@@ -1,0 +1,81 @@
+---
+type SubItem = { title: string; html: string };
+type Section = { title: string; html?: string; items?: SubItem[]; open?: boolean };
+const { sections = [] } = Astro.props as { sections: Section[] }
+---
+<div class="accordion">
+  {sections.map((s) => (
+    <details class="accordion__item" open={s.open}>
+      <summary class="accordion__summary">{s.title}</summary>
+      {s.html && <div class="accordion__content" set:html={s.html} />}
+      {s.items && (
+        <div class="accordion__sublist">
+          {s.items.map((it) => (
+            <div class="subrow">
+              <div class="subrow__badge">{it.title}</div>
+              <div class="subrow__panel" set:html={it.html} />
+            </div>
+          ))}
+        </div>
+      )}
+    </details>
+  ))}
+  <slot />
+</div>
+
+<style>
+  .accordion {
+    display: grid;
+    gap: 12px;
+  }
+  .accordion__item {
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 12px;
+    background: rgba(0,0,0,0.2);
+    overflow: hidden;
+  }
+  .accordion__summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 12px 16px;
+    font-weight: 800;
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    border-bottom: 1px solid var(--sl-color-hairline);
+  }
+  .accordion__summary::-webkit-details-marker { display: none; }
+  .accordion__content {
+    padding: 10px 14px 14px;
+    line-height: 1.75;
+  }
+  .accordion__sublist {
+    display: grid;
+    gap: 12px;
+    padding: 12px 14px 14px;
+  }
+  .subrow {
+    display: grid;
+    grid-template-columns: 88px 1fr; /* 고정폭 배지 + 가변 패널 */
+    gap: 12px;
+    align-items: center; /* 세로 중앙정렬 */
+  }
+  .subrow__badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding: 0 12px;
+    background: rgba(80,120,255,0.18);
+    border: 1px solid rgba(80,120,255,0.35);
+    border-radius: 10px;
+    font-weight: 800;
+    text-align: center;
+  }
+  .subrow__panel {
+    padding: 12px 14px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 10px;
+  }
+</style>
+
+
