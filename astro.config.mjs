@@ -58,9 +58,22 @@ export default defineConfig({
                     label: "직업",
                     translations: { en: "Jobs" },
                     items: [
-                        { label: "히어로", link: "job/hero", translations: { en: "Hero" } },
-                        { label: "다크나이트", link: "job/darkknight", translations: { en: "Dark Knight" } },
+                        {
+                            label: "히어로",
+                            link: "job/hero",
+                            translations: { en: "Hero" },
+                        },
+                        {
+                            label: "다크나이트",
+                            link: "job/darkknight",
+                            translations: { en: "Dark Knight" },
+                        },
                     ],
+                },
+                {
+                    label: "성장 던전",
+                    translations: { en: "Growth Dungeons" },
+                    link: "dungeon",
                 },
             ],
             head: [
@@ -105,7 +118,9 @@ export default defineConfig({
     vite: {
         resolve: {
             alias: {
-                "@images": fileURLToPath(new URL("./src/images", import.meta.url)),
+                "@images": fileURLToPath(
+                    new URL("./src/images", import.meta.url),
+                ),
             },
         },
     },
