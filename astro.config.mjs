@@ -68,6 +68,36 @@ export default defineConfig({
                             link: "job/darkknight",
                             translations: { en: "Dark Knight" },
                         },
+                        {
+                            label: "썬콜",
+                            link: "job/il",
+                            translations: { en: "Arch Mage (Ice, Lightning)" },
+                        },
+                        {
+                            label: "불독",
+                            link: "job/fp",
+                            translations: { en: "Arch Mage (Fire, Poison)" },
+                        },
+                        {
+                            label: "신궁",
+                            link: "job/marksman",
+                            translations: { en: "Marksman" },
+                        },
+                        {
+                            label: "보우마스터",
+                            link: "job/bowmaster",
+                            translations: { en: "Bowmaster" },
+                        },
+                        {
+                            label: "섀도어",
+                            link: "job/shadower",
+                            translations: { en: "Shadower" },
+                        },
+                        {
+                            label: "나이트로드",
+                            link: "job/nightlord",
+                            translations: { en: "Night Lord" },
+                        },
                     ],
                 },
                 {
