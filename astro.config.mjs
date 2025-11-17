@@ -80,7 +80,7 @@ export default defineConfig({
                 {
                     tag: "script",
                     attrs: {
-                        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2420658305303725",
+                        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3360469512909031",
                         crossorigin: "anonymous",
                         async: true,
                         type: "text/javascript",
