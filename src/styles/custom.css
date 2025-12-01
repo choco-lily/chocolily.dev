@@ -1,5 +1,12 @@
 /* 헤비 관련 커스텀 스타일 */
 
+:root {
+    /* 사이트 공통 포인트 컬러 */
+    --hebi-brand: #8daace;
+    /* Starlight 기본 accent 색도 함께 덮어써서 로고/버튼 색 통일 */
+    --sl-color-accent: #8daace;
+}
+
 @font-face {
     font-family: 'PretendardJPVariable';
     src: url('/PretendardJPVariable.woff2') format('woff2-variations');
