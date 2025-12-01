@@ -38,6 +38,9 @@ export default defineConfig({
             social: {
                 github: "https://github.com/choco-lily/chocolily.dev",
             },
+            editLink: {
+                baseUrl: "https://github.com/choco-lily/chocolily.dev/edit/main/",
+            },
             sidebar: [
                 {
                     label: "leadingNavLinks",
@@ -45,14 +48,14 @@ export default defineConfig({
                         {
                             label: "소개",
                             translations: { en: "About" },
-                            link: "main",
+                            link: "about",
                         },
                     ],
                 },
                 {
                     label: "헤비",
                     translations: { en: "Hebi" },
-                    link: "main",
+                    link: "about",
                 },
             ],
             head: [],
