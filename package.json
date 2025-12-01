@@ -1,0 +1,36 @@
+{
+    "name": "chocolily.dev",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "node dark.js && astro check && astro build",
+        "preview": "astro preview",
+        "astro": "astro",
+        "prettier": "prettier --write ."
+    },
+    "dependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@astrojs/cloudflare": "^12.3.1",
+        "@astrojs/starlight": "^0.32.5",
+        "@lorenzo_lewis/starlight-utils": "^0.3.2",
+        "astro": "^5.5.3",
+        "dayjs": "^1.11.13",
+        "prettier-plugin-astro": "^0.14.1",
+        "sharp": "^0.33.5",
+        "typescript": "^5.8.2"
+    },
+    "prettier": {
+        "semi": false,
+        "singleQuote": false,
+        "tabWidth": 4,
+        "overrides": [
+            {
+                "files": "*.astro",
+                "options": {
+                    "parser": "astro"
+                }
+            }
+        ]
+    }
+}
